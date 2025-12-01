@@ -1,343 +1,474 @@
-        html {
-        scroll-behavior: smooth;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        body {
-            background-image: url("/imagenes/fondo.jpeg");
-            background-repeat: no-repeat;      /* No repetir la imagen */
-            background-size: cover;            /* Que cubra toda la pantalla */
-            background-position: center;       /* Centrada */
-            background-attachment: fixed;      /* Fondo fijo */
-            font-family: 'Segoe UI', sans-serif;
-            
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-        }
+body {
+  background-image: url("/imagenes/fondo.jpeg");
+  background-repeat: no-repeat; /* No repetir la imagen */
+  background-size: cover; /* Que cubra toda la pantalla */
+  background-position: center; /* Centrada */
+  background-attachment: fixed; /* Fondo fijo */
+  font-family: "Segoe UI", sans-serif;
 
-      
-        /* Header */
-        header {
-            display: flex;
-            font-family: 'Segoe UI', sans-serif;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background: #bef9fde6;
-            backdrop-filter: blur(10px);
-            border-bottom: 2px solid #29b8c2;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #04899296;
-            animation: wave 5s infinite ease-in-out;
-            z-index: -1;
-        }
-        @keyframes wave {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-    
-        .logo img {
-            width: 200px;   
-            height: 100px;   
-            background:url('../../imagenes/umi_logo.jpg') center/cover no-repeat;
-            background-size: contain;
-             background-position: center; 
-             background-size: contain;  
-             margin-left: 30px; 
-             border-radius: 50%;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-size: large;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #01579b;
-        }
-        /* Hero */
-        .hero {
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: url('../../imagenes/mar_umi.jpg') center/cover no-repeat;
-            color: rgb(2, 19, 27);
-            position: relative;
-            max-width: 100%; 
-            margin: 0;       
-            padding: 0;   
-        }
-   
-        .hero-content {
-            padding: 0%;
-            position: relative;
-            z-index: 2;
-            max-width: 600px;
-        }
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+}
 
-        .hero .frase {
-           font-family: "Momo Signature", cursive;
-            font-weight: 400;
-            font-style: normal;
-            color: rgb(114, 107, 107);
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(105, 169, 229, 0.4);
-            z-index: 1;
-        }
-        
-        .hero h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-            font-family: 'nunito', sans-serif;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-        }
-        .hero p {
-            font-size: 1.2em;
-            margin-bottom: 30px;
-            font-family: 'nunito', sans-serif;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-            
-        }
-        
-        .subtitulo{
-            margin-top: 3rem;
-        }
-        .cta-button {
-            background: #0f4863;
-            color: white;
-            padding: 15px 30px;
-            position: center;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .cta-button:hover {
+/* Header */
+header {
+  display: flex;
+  font-family: "Segoe UI", sans-serif;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(137, 243, 54, 1);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid #bbc9ca;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #046e75d8;
+  animation: wave 5s infinite ease-in-out;
+  z-index: -1;
+}
+@keyframes wave {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.logo img {
+  width: 200px;
+  height: 100px;
+  background: url("../../imagenes/umi_logo.jpg") center/cover no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-size: contain;
+  margin-left: 30px;
+  border-radius: 50%;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: rgba(137, 243, 54, 1);
+}
+/* Hero */
+.hero {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: url("../../imagenes/mar_umi.jpg") center/cover no-repeat;
+  color: rgb(2, 19, 27);
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-content {
+  padding: 0%;
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.hero .frase {
+  font-family: "Momo Signature", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: rgb(114, 107, 107);
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(105, 169, 229, 0.4);
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-family: "nunito", sans-serif;
+  text-shadow: 2px 2px 4px rgba(63, 59, 59, 0.158);
+}
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+  font-family: "nunito", sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.subtitulo {
+  margin-top: 3rem;
+}
+.cta-button {
+  background: #0f4863;
+  color: white;
+  padding: 15px 30px;
+  position: center;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+/*.cta-button:hover {
             background: rgb(2, 119, 187);
-        }
-        /* Secciones */
-        section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        section h2 {
-            text-align: center;
-            font-size: 2.5em;
-            color: #0277bd;
-            margin-bottom: 30px;
-        }
+        }*/
+/* Secciones */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+section h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #0f4863;
+  margin-bottom: 30px;
+}
 
-        .about p {
-            font-family: 'nunito', sans-serif;
-            font-size: medium;
-            font-weight: 800;
-        }
+.about p {
+  font-family: "nunito", sans-serif;
+  font-size: medium;
+  font-weight: 800;
+}
 
-        .about, .services, .trainings {
-            max-width: 100%;
-            background: rgba(188, 196, 241, 0.8);
-            border-radius: 20px;
-            margin-bottom: 40px;
-            margin-top: 40px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
+.about,
+.services,
+.trainings {
+  max-width: 100%;
+  background: rgba(188, 196, 241, 0.8);
+  border-radius: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
+/* Grid responsive */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
 
-    /* Grid responsive */
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap:1.25rem;
-    }
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(209, 220, 223, 0.98),
+    var(--card-bg)
+  );
+  border-radius: var(--radius);
+  padding: calc(var(--pad) + 0.25rem);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  min-height: 240px;
+  position: relative;
+  overflow: visible;
+}
 
-    .card{
-      background: linear-gradient(180deg, rgba(209, 220, 223, 0.98), var(--card-bg));
-      border-radius: var(--radius);
-      padding: calc(var(--pad) + 0.25rem);
-      box-shadow: var(--shadow);
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-      transition: transform .22s ease, box-shadow .22s ease;
-      min-height: 240px;
-      position:relative;
-      overflow:visible;
-    }
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(232, 235, 236, 0.11);
+}
 
-    .card:hover{
-      transform: translateY(-6px);
-      box-shadow: 0 18px 40px rgba(232, 235, 236, 0.11);
-    }
+.card .card-img {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: linear-gradient(135deg, var(--ocean-2), var(--ocean-1));
+  border: 4px solid rgba(255, 255, 255, 0.18);
+  margin-top: -56px; /* sale por encima del borde de la tarjeta */
+  box-shadow: 0 8px 18px rgba(6, 25, 35, 0.12);
+  display: block;
+}
 
-    .card .card-img{
-      width:86px;
-      height:86px;
-      border-radius:50%;
-      object-fit:cover;
-      background: linear-gradient(135deg, var(--ocean-2), var(--ocean-1));
-      border: 4px solid rgba(255,255,255,0.18);
-      margin-top:-56px; /* sale por encima del borde de la tarjeta */
-      box-shadow: 0 8px 18px rgba(6,25,35,0.12);
-      display:block;
-    }
+/* Ajuste para que la imagen no empuje el contenido al usar margin-top negativo */
+.card .spacer {
+  height: 36px;
+  width: 100%;
+}
 
-    /* Ajuste para que la imagen no empuje el contenido al usar margin-top negativo */
-    .card .spacer{
-      height:36px;
-      width:100%;
-    }
+.card h3 {
+  margin: 0.65rem 0 0.45rem 0;
+  font-size: 1.05rem;
+  color: var(--ocean-1);
+  font-weight: 600;
+  line-height: 1.2;
+}
 
-    .card h3{
-      margin:0.65rem 0 0.45rem 0;
-      font-size:1.05rem;
-      color:var(--ocean-1);
-      font-weight:600;
-      line-height:1.2;
-    }
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  padding: 0 0.5rem 0.5rem 0.5rem;
+}
 
-    .card p{
-      margin:0;
-      color:var(--muted);
-      font-size:0.95rem;
-      line-height:1.45;
-      padding:0 0.5rem 0.5rem 0.5rem;
-    }
+/* Pequeña barra inferior opcional (decorativa) */
+.card .bar {
+  margin-top: auto;
+  width: 56px;
+  height: 6px;
+  border-radius: 99px;
+  background: linear-gradient(
+    90deg,
+    rgba(10, 100, 140, 0.95),
+    rgba(0, 150, 200, 0.95)
+  );
+  margin-bottom: 0.75rem;
+  opacity: 0.95;
+}
 
-    /* Pequeña barra inferior opcional (decorativa) */
-    .card .bar{
-      margin-top:auto;
-      width:56px;
-      height:6px;
-      border-radius:99px;
-      background: linear-gradient(90deg, rgba(10,100,140,0.95), rgba(0,150,200,0.95));
-      margin-bottom:0.75rem;
-      opacity:0.95;
-    }
+/* Responsive tweaks */
+@media (max-width: 520px) {
+  body {
+    padding: 1rem;
+  }
+  .card .card-img {
+    width: 72px;
+    height: 72px;
+    margin-top: -46px;
+  }
+  .card {
+    min-height: 220px;
+  }
+}
 
-    /* Responsive tweaks */
-    @media (max-width:520px){
-      body{padding:1rem}
-      .card .card-img{width:72px;height:72px;margin-top:-46px}
-      .card{min-height:220px}}
+/* Contacto */
+.contact {
+  max-width: 100%;
+  background: linear-gradient(transparent, rgb(175, 179, 231), white);
+  color: rgb(61, 59, 59);
+  text-align: center;
+  font-weight: bold;
 
+  border-radius: 10px;
+  border-color: transparent;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+input,
+textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+/* Footer */
+footer {
+  background: grey;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
 
-        
-        /* Contacto */
-        .contact {
-            max-width: 100%;
-            background: linear-gradient(transparent, rgb(175, 179, 231), white );
-            color: white;
-            text-align: center;
-            border-radius: 10px;
-            border-color: transparent;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        input, textarea {
-            padding: 10px;
-            border: none;
-            border-radius: 10px;
-        }
-        /* Footer */
-        footer {
-            background: #01579b;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+.social-links {
+  display: flex;
+  flex-direction: column; /* Apila los botones verticalmente */
+  align-items: center; /* Centra los botones en el footer */
+  gap: 15px;
+  margin-bottom: 25px; /* Mas espacio */
+  justify-content: center; /* Centra horizontalmente */
+  width: 100%;
+  padding: 12px 18px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "Segoe UI", sans-serif;
+  transition: background-color 0.3s ease;
+  color: white;
+}
 
-       .social-links {
-            display: flex;
-            flex-direction: column; /* Apila los botones verticalmente */
-            align-items: center; /* Centra los botones en el footer */
-            gap: 15px;
-            margin-bottom: 25px; /* Mas espacio */
-            justify-content: center;    /* Centra horizontalmente */
-            width: 100%;
-            padding: 12px 18px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1rem;
-            font-family: 'Segoe UI', sans-serif;
-            transition: background-color 0.3s ease;
-            color: white;
-        }
+.social-button {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight: 600;
+  width: 300px;
+  transition: opacity 0.3s, transform 0.3s;
+  white-space: nowrap;
+}
+.social-button i {
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
 
-        .social-button {
-            text-decoration: none;
-            color: white;
-            font-size: 1.2em;
-            padding: 15px 30px; 
-            border-radius: 10px; 
-            font-weight: 600;
-            width: 300px; 
-            transition: opacity 0.3s, transform 0.3s;
-            white-space: nowrap;
-        }
-        .social-button i {
-            margin-right: 10px; /* Espacio entre el ícono y el texto */
-        }
-        
+.instagram-btn {
+  background: #e4405f; /* Color de Instagram */
+}
+.whatsapp-btn {
+  background: #25d366; /* Color de WhatsApp */
+}
+.social-button:hover {
+  opacity: 0.8;
+  transform: translateY(-2px); /* Pequeño efecto al pasar el mouse */
+}
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero h1 {
+    font-size: 2em;
+  }
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
+/*Seccion nosotros*/
+.container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
 
-        .instagram-btn {
-            background: #e4405f; /* Color de Instagram */
-        }
-        .whatsapp-btn {
-            background: #25d366; /* Color de WhatsApp */
-        }
-        .social-button:hover {
-            opacity: 0.8;
-            transform: translateY(-2px); /* Pequeño efecto al pasar el mouse */
-        }
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                gap: 10px;
-            }
-            .hero h1 {
-                font-size: 2em;
-            }
-            .services {
-                grid-template-columns: 1fr;
-            }
-        }
+.people {
+  display: flex;
+  gap: 20px;
+}
+
+.person {
+  display: inline-block;
+  margin: 30px;
+}
+
+.person img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ddd;
+}
+
+.name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.phrase {
+  margin-top: 30px;
+  font-size: 18px;
+  font-style: italic;
+}
+/*termino secciom nosotros*/
+
+/*carrusel*/
+
+.carousel-container {
+  width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  width: 350px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-item.active {
+  opacity: 1;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  font-size: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.prev {
+  left: 10px;
+}
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* Texto dinámico */
+#carouselTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+#carouselText {
+  font-size: 15px;
+  color: #080000;
+}
