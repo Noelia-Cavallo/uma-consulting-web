@@ -20,7 +20,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#about">Nosotras</a></li>
                 <li><a href="#services">Servicios</a></li>
                 <li><a href="#trainings">Capacitaciones</a></li>
                 <li><a href="#contact">Contacto</a></li>
@@ -30,22 +30,31 @@
 
     <section class="hero">
         <div class="hero-content">
-            <div><h1>Consultoría</h1></div>
-                <div class="frase">
-                    <h3>“El desarrollo personal es como una ola:
-                 comienza en silencio, crece con constancia
-                 y transforma todo a su paso.” <span>Dalai Lama</span></h3>
-                </div>
+            <div><h1>Talento en Acción</h1></div>
+                
                  <div class="subtitulo">
                 <p>Consultoría y gestión de proyectos con propósito. Capacitaciones para crecer.</p>
-                <button class="cta-button">¡Escribinos para empezar!</button>
+                
                 </div>
         </div>
     </section>
 
     <section id="about" class="about">
-        <h2>Nosotros</h2>
-        <p>Somos una consultoría que fluye como el océano: adaptable, profunda y llena de potencial. Brindamos orientación laboral, mindfulness y herramientas para tu crecimiento profesional, siempre con un enfoque no rígido y profesional.</p>
+        <h2>Nosotras</h2>
+        <div class="container">
+          <div class="people">
+           <div class="person">
+            <img src="/imagenes/png-clipart-computer-icons-person-black-shadow-silhouette-avatar-thumbnail.png" alt="Persona 1">
+            <p class="name">Gabi Molignano</p>
+           </div>
+           <div class="person">
+            <img src="/imagenes/png-clipart-computer-icons-person-black-shadow-silhouette-avatar-thumbnail.png" alt="Persona 2">
+            <p class="name">Karina Rocha</p>
+           </div>
+          </div>
+          <p class="phrase">"Con una visión centrada en la educación y la tecnología, el desarrollo personal-profesional, acompañamos a las personas y empresas a impactar positivamente."</p>
+        </div>
+
     </section>
 
     <section id="services" class="services">
@@ -97,27 +106,48 @@
 
     <section id="trainings" class="trainings">
         <h2>Capacitaciones Destacadas</h2>
-        <ul>
-            <li><strong>💭 Taller de Inteligencia Artificial:</strong> Del 26/6 y 3/7. Entiende la IA desde lo básico, con ejemplos prácticos. Ideal para quienes buscan nociones sin tecnicismos.</li>
-            <li><strong>✨ Desarrollo Profesional +45:</strong> Valoramos tu experiencia. Potenciá habilidades comunicativas y herramientas del mercado laboral.</li>
-        </ul>
-        <button class="cta-button">¡Inscríbete ahora!</button>
+ <div class="carousel-container">
+
+    <div class="carousel">
+
+        <div class="carousel-item active" data-title="Aprendé IA Fácil"
+             data-text="¿Qué es la IA en criollo? Desarmamos el concepto con ejemplos que vas a reconocer.
+¿Dónde la encontrás? Desde tu celular hasta en las películas que te recomienda el streaming.
+¡Y mucho más! Todo de forma práctica, cercana y sin esos términos raros.">
+            <img src="imagenes/IA-Microsof-1536x864.jpg" alt="">
+        </div>
+
+        <div class="carousel-item" data-title="Evaluación de CV"
+             data-text="Mejoramos tu currículum para aumentar tus oportunidades laborales.">
+            <img src="imagenes/evaluacioncv.png" alt="">
+        </div>
+
+        <div class="carousel-item" data-title="Habilidades Blandas"
+             data-text="Potenciá tus habilidades personales para comunicarte mejor, trabajar en equipo y liderar con confianza.">
+            <img src="imagenes/softkills.png" alt="">
+        </div>
+
+        <!-- Flechas -->
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+    </div>
+
+    <!-- TÍTULO Y FRASE DINÁMICOS -->
+    <h3 id="carouselTitle"></h3>
+    <p id="carouselText"></p>
+
+</div>
+``
+
+   
+        
     </section>
 
     <section id="contact" class="contact">
         <h2>¡Conectemos!</h2>
-        <p>¿Listo para fluir hacia tu próximo nivel? Escríbenos.</p>
-        <form action="#" method="post">
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Mensaje" rows="4" required></textarea>
-            <button type="submit" class="cta-button">Enviar</button>
-        </form>
-    </section>
-
-  <footer>
-    <div class="social-links">
-        <a href="https://wa.me/TUNUMERO" target="_blank" class="social-button whatsapp-btn">
+        <p>¿Listo para fluir hacia tu próximo nivel?</p>
+        <div class="social-links">
+        <a href="https://wa.me/+5491151169710" target="_blank" class="social-button whatsapp-btn">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 448 512">
           <path d="M380.9 97.1C339 55.2 283.1 32 224 32 100.3 32 0 132.3 0 256c0 45.2 12 89.4 34.8 128.1L0 480l98.5-34.3C136.6 468 179.9 480 224 480c123.7 0 224-100.3 224-224 0-59.1-23.2-115-67.1-158.9zM224 433.9c-38.7 0-76.6-10.4-109.7-30.1l-7.8-4.6-58.5 20.4 20.4-58.5-4.6-7.8C62.5 320.6 52.1 282.7 52.1 244 52.1 142 122 72.1 224 72.1c54.3 0 105.3 21.1 143.7 59.4S440 189.7 440 244c0 102-69.9 189.9-216 189.9zm100.7-138.5l-34.7-17.4c-4.7-2.3-10.1-1.5-13.8 2l-14.4 14.7c-34.8-17.8-62.7-45.7-80.5-80.5l14.7-14.4c3.5-3.7 4.3-9.1 2-13.8l-17.4-34.7c-3.4-6.7-11.6-9.3-18-5.9l-25.1 12.6c-6.6 3.3-10.7 10.1-10.7 17.3 0 91.7 74.3 166 166 166 7.2 0 14-4.1 17.3-10.7l12.6-25.1c3.4-6.4.8-14.6-5.9-18z"/>
         </svg>
@@ -130,8 +160,47 @@
         Seguinos en Instagram
         </a>
     </div>
+    </section>
+
+  <footer>
+    
     <p>&copy; 2023 UMI Consultoria. Fluyendo hacia el éxito.</p>
 
 </footer>
+<script>
+const items = document.querySelectorAll('.carousel-item');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+
+const title = document.getElementById('carouselTitle');
+const text = document.getElementById('carouselText');
+
+let index = 0;
+
+// Mostrar slide + título + texto
+function updateSlide(i) {
+    items.forEach(item => item.classList.remove('active'));
+    items[i].classList.add('active');
+
+    title.textContent = items[i].dataset.title;
+    text.textContent = items[i].dataset.text;
+}
+
+// Inicializar
+updateSlide(index);
+
+// Botón anterior
+prev.addEventListener('click', () => {
+    index = (index - 1 + items.length) % items.length;
+    updateSlide(index);
+});
+
+// Botón siguiente
+next.addEventListener('click', () => {
+    index = (index + 1) % items.length;
+    updateSlide(index);
+})
+
+</script>
 </body>
 </html>
